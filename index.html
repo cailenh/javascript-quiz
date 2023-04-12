@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Javascript Quiz</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&family=Press+Start+2P&display=swap" rel="stylesheet">
+        <!-- end Google fonts -->
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <header>
+            <div id="view-high-scores">View high scores</div>
+            <div id="timer">Time: <span id="time-left">100</span></div>
+        </header>
+        <main>
+            <!-- UNHIDDEN ON START -->
+            <!-- intro message -->
+            <section id="intro">
+                <h1 id="main-heading">JavaScript Coding Quiz</h1>
+                <p id="intro-text">Try to answer the following JavaScript-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+                <button type="button" id="start-quiz">Start Quiz</button>
+            </section>
+            
+            <!-- HIDDEN ON START -->
+            <!-- question -->
+            <section id="question" class="display-none">
+                <h2>Question <span id="question-number"></span>:</h2>
+                <p id="question-text"></p>
+                <div id="question-answers">
+                    <!-- answer buttons will be appended here -->
+                </div>
+            </section>
+
+            <!-- game over -->
+            <section id="game-over" class="display-none">
+                <h1>Game Over!</h1>
+                <p>Would you like to try again?</p>
+                <button type="button" id="restart-quiz">Restart</button>
+            </section>
+
+            <!-- final scoring -->
+            <section id="final-scoring" class="display-none">
+                <h2>Finished!</h2>
+                <p>Your final score is <span id="final-score"></span>.</p>
+                <p>Enter up to 3 initials: <input type="text" id="initials" name="initials" maxlength="3"></input></p>
+                <button type="submit" id="initials-submit">Submit</button>
+            </section>
+
+            <!-- answer status is down here so it will appear below final score section -->
+            <div id="question-answer-status" class="display-none"></div>
+
+            <!-- high score list -->
+            <section id="high-scores" class="display-none">
+                <h2>High Scores</h2>
+                <ol id="high-scores-list">
+                </ol>
+                <button type="button" id="go-back-btn">Go Back</button><button type="button" id="clear-scores-btn">Clear High Scores</button>
+            </section>
+            <!-- END HIDDEN ON START -->
+        </main>
+        <script src="assets/js/script.js"></script>
+    </body>
+</html>

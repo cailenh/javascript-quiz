@@ -1,0 +1,185 @@
+:root {
+    --dark: #323330;
+    --accent: #419556;
+    --hover: #a6e7f7;
+    --white: #fff;
+}
+
+html {
+    min-height: 100%; /* forces gradient background to be fill the window */
+}
+
+body {
+    /* gradient background - code from cssgradient.io */
+    background: var(--dark);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#323330",endColorstr="#000000",GradientType=1);
+    color: var(--white);
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2 {
+    font-family: sans-serif;
+    color: var(--accent);
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+button {
+    margin-bottom: 20px;
+    box-shadow:   -4px 0 0 0 var(--accent),
+                 4px 0 0 0 var(--accent),
+                 0 -4px 0 0 var(--accent),
+                 0 4px 0 0 var(--accent);
+    border: none;
+    padding: 5px 10px;
+    background-color:  var(--accent);
+    cursor: pointer;
+    font-size: 20px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: var(--dark);
+}
+
+button:hover {
+    background-color: var(--hover);
+    box-shadow:   -4px 0 0 0 var(--hover),
+                 4px 0 0 0 var(--hover),
+                 0 -4px 0 0 var(--hover),
+                 0 4px 0 0 var(--hover);
+}
+
+input[type=text] {
+    margin: 0px 10px;
+    border: 2px solid var(--accent);
+    padding: 5px;
+    background-color: #000;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+input[type=text]:focus,
+input[type=text]:focus-visible {
+    border: 2px solid var(--white);
+    outline:none;
+    color: var(--white);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    margin: auto;
+    width: 50%;
+}
+
+
+/* class that hides elements when not in use */
+
+.display-none {
+    display: none;
+}
+
+/* header */
+
+#view-high-scores {
+    color: var(--accent);
+}
+
+#view-high-scores:hover,
+#view-high-scores:focus {
+    color: var(--hover);
+    cursor: pointer;
+}
+
+#timer {
+    color: var(--accent);
+}
+
+#time-left {
+    color: var(--white);
+}
+
+/* intro message and game over */
+
+#intro, #game-over {
+    text-align: center;
+}
+
+#intro p,
+#game-over p {
+    margin-bottom: 40px;
+}
+
+/* question content */
+
+#question button {
+    display: block;
+    text-transform: none;
+}
+
+#question-answer-status {
+    font-style: italic;
+    color: var(--hover);
+}
+
+/* final score message */
+
+#final-score {
+    font-weight: bold;
+}
+
+#final-scoring button {
+    margin-top: 20px;
+}
+
+/* high scores */
+
+#high-scores {
+    margin-top: 60px;
+}
+
+#high-scores ol {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+#high-scores li {
+    display: inline-block;
+    margin-bottom: 5px;
+    padding: 0 5px;
+    background-color: var(--hover);
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--dark);
+}
+
+#high-scores span {
+    display: inline-block;
+    vertical-align: middle;
+    font-family:sans-serif;
+}
+
+#high-scores button {
+    margin-right: 20px;
+}
+
+@media (max-width: 912px) {
+    main {
+        width: 80%;
+    }
+
+    #question {
+        text-align: center;
+    }
+  }
